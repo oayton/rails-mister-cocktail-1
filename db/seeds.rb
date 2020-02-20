@@ -7,7 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'json'
 require 'open-uri'
-require 'byebug'
+
+puts 'Cleaning database...'
+Restaurant.destroy_all if Rails.env.development?
 
 url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
 cocktails_serialized = open(url).read

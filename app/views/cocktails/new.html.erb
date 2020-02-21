@@ -1,3 +1,12 @@
-<br>
-<h1>Create a new Cocktail!</h1>
-<p>Fill in the form!</p>
+<div>
+
+  <div class="container p-8 mt-8">
+    <h1>Step 1 - What cocktail do you want to make?!</h1>
+    <%= simple_form_for @cocktail do |f| %>
+      <%= f.input :name %>
+      <%= f.input :image_url %>
+      <%= f.submit %>
+      <%= link_to "Cancel", root_path, class: "btn btn-default" %>
+    <% end %>
+  </div>
+</div>

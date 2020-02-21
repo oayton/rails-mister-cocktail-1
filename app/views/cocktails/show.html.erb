@@ -1,10 +1,10 @@
 
 
 <div class="cards-grid d-flex space-between">
-  <div class="container m-16">
+  <div class="container">
     <h1><%= @cocktail.name %></h1>
     <p></p>
-    <div class="row">
+    <div class="row cards">
       <div class="card col-3" style="width: 200px;">
       <%= image_tag @cocktail[:image_url], alt: "alttext", size: 200 %>
       </div>
@@ -15,12 +15,12 @@
         <h3>Method</h3>
       </div>
     </div>
-
-<%= link_to "Delete", cocktail_path(@cocktail),
-      method: :delete,
-      data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %>
-<%= link_to "Back to Cocktails List", root_path, class: 'btn btn-primary'  %>
-<%= link_to "Edit Listing", edit_cocktail_path(@cocktail), class: 'btn btn-primary' %>
-
+  <div>
+    <%= link_to "Delete", cocktail_path(@cocktail),
+          method: :delete,
+          data: { confirm: "Are you sure?" }, class: 'btn btn-primary' %>
+    <%= link_to "Back to Cocktails List", root_path, class: 'btn btn-primary'  %>
+    <%= link_to "Edit Listing", edit_cocktail_path(@cocktail), class: 'btn btn-primary' %>
+  </div>
 </div>
 

@@ -1,17 +1,18 @@
 <div class="main-container">
-  <br>
-  <h1>🍸 Cocktails 🍸</h1>
-  <div class="cocktails-container">
-    <% @cocktails.each do |cocktail| %>
-    <div class="card m-2" style="width: 350px;">
-         <%= image_tag cocktail[:image_url], alt: "alttext", class: "card-img-top"  %>
-        <div class="card-body">
-          <h2 class="card-text"><%= cocktail[:name] %></h2>
-          <div class="btn btn-outline-dark m-2">
-          <%= link_to "More Details" , cocktail_path(cocktail), style:"text-decoration: none; color: black"%>
-          </div>
+<h1>🍸 Cocktails 🍸</h1>
+<div class="cocktails-container">
+  <% @cocktails.each do |cocktail| %>
+  <div class="card m-2" style="width: 350px;">
+       <%= image_tag cocktail[:image_url], alt: "alttext", class: "card-img-top"  %>
+      <div class="card-body">
+        <h2 class="card-text"><%= cocktail[:name] %></h2>
+        <div class="btn btn-outline-dark m-2">
+        <%= link_to "More Details" , cocktail_path(cocktail), style:"text-decoration: none; color: black"%>
         </div>
-    </div>
-    <% end %>
+      </div>
   </div>
+  <% end %>
+</div>
+
+<%= link_to "Add New Cocktail", new_cocktail_path%>
 </div>

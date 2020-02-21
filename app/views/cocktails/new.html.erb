@@ -1,12 +1,19 @@
 <div>
 
+
+
   <div class="container p-4 mt-4">
     <h1>Step 1 - What cocktail do you want to make?!</h1>
-    <%= simple_form_for @cocktail do |f| %>
-      <%= f.input :name %>
-      <%= f.input :image_url %>
-       <button type="submit" class="btn btn-outline-primary">Submit</button>
-       <%= link_to "<button class='btn btn-outline-primary'>Cancel</button>".html_safe, root_path %>
-    <% end %>
+    <div class="cards">
+        <div class="card-category" >
+          <%= simple_form_for @cocktail do |f| %>
+          <%= f.input :name %>
+          <%= f.input :image_url %>
+           <button type="submit" class="btn btn-outline-primary">Submit</button>
+           <%= link_to "<button class='btn btn-outline-primary'>Cancel</button>".html_safe, root_path %>
+          <% end %>
+        </div>
+    </div>
+
   </div>
 </div>

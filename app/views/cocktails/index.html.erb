@@ -1,19 +1,16 @@
-<h1>Cocktails</h1>
-
-<ol>
-  <% @cocktails.each do |cocktail| %>
-  <div class="card-product">
-      <div class="card" style="width: 24rem;">
-       <%= image_tag cocktail[:image_url], alt: "alttext" %>
-      </div>
-      <div class="card-body">
-        <h2><%= cocktail[:name] %></h2>
-      </div>
-      <li>
-        <a href="cocktails/<%= cocktail.id %>"  class="btn btn-primary">Go somewhere</a>
-      </li>
+<div class="main-container">
+  <h1>🍸 Cocktails 🍸</h1>
+  <div class="cocktails-container">
+    <% @cocktails.each do |cocktail| %>
+    <div class="card m-2" style="width: 350px;">
+         <%= image_tag cocktail[:image_url], alt: "alttext", class: "card-img-top"  %>
+        <div class="card-body">
+          <h2 class="card-text"><%= cocktail[:name] %></h2>
+          <div class="btn btn-outline-dark m-2">
+          <%= link_to "More Details" , cocktail_path(cocktail), style:"text-decoration: none; color: black"%>
+          </div>
+        </div>
+    </div>
+    <% end %>
   </div>
-  <% end %>
-</ol>
-
-<%= link_to "Add New Cocktail", new_cocktail_path%>
+</div>

@@ -1,7 +1,7 @@
 <h1> test </h1>
 
 <%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :name %>
+  <%= f.input :name
   <%= f.input :description %>
   <%= f.association :ingredient %>
   <%= f.button :submit %>

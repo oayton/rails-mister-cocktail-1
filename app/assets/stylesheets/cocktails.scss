@@ -1,3 +1,62 @@
 // Place all the styles related to the Cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// .cocktails-container {
+//   width: 90vw;
+//   height:95vh;
+//   // display: grid;
+//   // grid-template-columns: 1fr 1fr 1fr;
+// }
+
+.main-container {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.card {
+  box-shadow: 2px 2px 4px #3c3c3c55;
+
+}
+
+.cocktails-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  width: 100%;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cocktails-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cocktails-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cocktails-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cocktails-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cocktails-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
